@@ -15,7 +15,7 @@ $(document).ready(function(e){
 		  
 		  // Actualiza la aceleracion cada 2 segundos
 		  //
-		  var opciones = { frenquency: 2000 };
+		  var opciones = { frequency: 2000 };
 		  
 		  watchID = navigator.accelerometer.watchAcceleration(Correcto, Error, opciones);
 		  navigator.geolocation.getCurrentPosition(Localiza, ErrorLocalizacion);
@@ -24,7 +24,7 @@ $(document).ready(function(e){
 	  
 	  function Detente() {
 		  if (watchID) {
-			  navigator.accelerometro.clearWatch(watchID);
+			  navigator.accelerometer.clearWatch(watchID);
 			  watchID = null;
 		  }
 	  }
@@ -34,9 +34,9 @@ $(document).ready(function(e){
 	 var element = document.getElementById('acelerometro');
 	 
 	 element.innerHTML = 'Aceleracion en  X: ' + acceleration.x + '<br />' +
-	    'Aceleracion en  Y: ' + acceleration.y + '<br />' +	  
-		'Aceleracion en  Z: ' + acceleration.z + '<br />' +	  
-		'Intervalo: '       + acceleration.timestamp + '<br />'; 
+	                     'Aceleracion en  Y: ' + acceleration.y + '<br />' +	  
+		                 'Aceleracion en  Z: ' + acceleration.z + '<br />' +	  
+		                 'Intervalo: '       + acceleration.timestamp + '<br />'; 
 	  }
 	  
 	  //Error: Falta al obtener la aceleracion
@@ -59,7 +59,7 @@ $(document).ready(function(e){
 	function ErrorLocalizacion(error){
 	   alert('codigo: '      + error.code  +'\n' + 
 	          'mensaje: ' + error.message+ '\n');
-}
+  }
 });//documento ready
 	    
 							  
