@@ -7,7 +7,7 @@ $(document).ready(function(e){
 	
 	// Cuando esta listo el dispositivo
 	function Dispositivo_Listo() {
-		comienza();
+		Comienza();
 	}
 	
 	// Empieza la 'observacion' de la aceleracion
